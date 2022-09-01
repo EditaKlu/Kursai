@@ -1,0 +1,29 @@
+html {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+h1 {
+    color: red;
+    background-color: rgb(0, 255, 149);
+}
+
+a{
+    color: black;
+}
+p.green{
+    /* skirta class */
+    color: green;
+}
+p#black{
+    /* skirta ID */
+    background: black;
+    color: white;
+}
+
+.green{
+    /* skirta class green */
+}
+
+h1 span .green{
+    /* skirta h1, kuriame yra span, kuriame yra class green  */
+}

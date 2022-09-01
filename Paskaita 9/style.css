@@ -1,0 +1,21 @@
+span {
+    text-decoration: dotted; border-bottom: 2px black dotted
+}
+input:focus, input:checked {
+    outline: 2px solid yellow;
+  }
+#card:invalid {
+    border: 2px solid red;
+}
+#card:valid {
+    border: 2px solid green;
+}
+button:hover {
+    background-color: darkgray;
+}
+input:invalid {
+    border: 2px solid red;
+}
+input:valid {
+    border: 2px solid green;
+}

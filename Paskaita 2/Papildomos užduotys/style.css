@@ -1,0 +1,46 @@
+html {
+    background-color: #9fad97;
+    font-size: xx-small;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.center {
+    text-align: center;
+}
+.green {
+    color: green;
+}
+.big {
+    font-size: x-large;
+    font-weight: bold;
+}
+.diff {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 7px;
+}
+.pav {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
+.button {
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    font-size: 20px;
+   padding-top: 10px;
+}
+.button1 {
+    background: rgb(117,150,64);
+    background: linear-gradient(0deg, rgba(117,150,64,1) 0%, rgba(134,168,56,1) 35%, rgba(214,236,167,1) 100%);
+    padding: 4px 15px;
+    border: 2px solid #578705;
+    font-weight: bold;
+    color: white;
+}

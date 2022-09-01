@@ -1,0 +1,129 @@
+html {
+    background-color: black;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+.introimg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 20%;
+}
+.introlink {
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: x-large;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5%;
+    color: red;
+}
+header {
+    display: block;
+    background-image:url("beautiful-colors.jpg");
+    width: auto;
+    border: 10px solid white;
+    padding: 100px;
+    margin: 20px;
+  }
+  header img {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    width: 20%;
+  }
+  nav {
+    float: right;
+  }
+  nav a {
+    margin-left: 50px;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: x-large;
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+  }
+  aside {
+    width: 25%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    font-style: italic;
+    background-color: lightgray;
+    color: black;
+  }
+aside img {
+    width: 50%;
+    margin-left: 50px;
+    margin-top: 10px;
+    border: 5px solid black;
+}
+h1{
+    text-align: center;
+    text-shadow: 1px 1px red;
+}
+h2 {
+    text-align: center;
+    font-size: small;
+}
+section {
+    width: 700px;
+}
+.istorija img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    max-width: 300px;
+    height: auto;
+}
+footer {
+    display: block;
+    background-image:url("beautiful-colors.jpg");
+    width: auto;
+    height: 30px;
+    border: 3px solid white;
+    line-height: 30px;
+    text-align: center; 
+}
+footer a {
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: x-large;
+    color: #fff;
+    margin-left: 30px;
+}
+span {
+    float: right;
+    
+}
+.img3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 15px solid white;
+}
+.button {
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    font-size: 20px;
+   padding-top: 10px;
+}
+.button1 {
+    background: linear-gradient(0deg, rgb(51, 4, 4) 0%, rgb(238, 21, 21) 35%, rgb(31, 12, 12) 100%);
+    padding: 4px 15px;
+    border: 2px solid white;
+    font-weight: bold;
+    color: white;
+}
