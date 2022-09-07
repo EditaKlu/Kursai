@@ -1,0 +1,47 @@
+.box{
+    background-color: red;
+    width: 100%;
+    flex: 1;
+    margin: 10px;
+    color: white;
+    padding: 10vh 0;
+    text-align: center;
+}
+.flexbox{
+    display: flex;
+    min-height: 50vh;
+}
+.kaire, .desine{
+    width: 50%;
+}
+.desine{
+    display: flex;
+    flex-wrap: wrap;
+}
+.desine-virsus, .desine-apacia{
+    width: 100%;
+}
+.kaire, .desine-virsus, .desine-apacia{
+    display: flex;
+}
+.gridcubes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 10px 10px 0px 10px;
+    
+}
+.grid {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 10vh 0;
+}
+.grid:nth-child(1) {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+.grid:nth-child(2) {
+    grid-column: span 2/5;
+}

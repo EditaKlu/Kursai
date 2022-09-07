@@ -1,0 +1,20 @@
+.container > div {
+     /* stilius tik vaikiniams elementams */
+    background: #eee;
+    padding: 1em;
+}
+.container > div:nth-child(odd) {
+    background: #ddd;
+}
+.container {
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    /* grid-column-gap: 1em; */
+    grid-gap: 1em;
+    /* grid-template-columns: 1fr 2fr 1fr; */
+}
+.nested {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+/* grid-column: span 3/5 5-pabaiga, 3 žymi nuo pabaigos */
