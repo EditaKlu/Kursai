@@ -1,0 +1,27 @@
+.container, .right, .bottomright {
+    display: flex;
+}
+.right {
+    flex-direction: column;
+    flex: 1;
+}
+.left, .topright, .brleft, .brright {
+    background: aquamarine;
+    flex: 1;
+}
+.container {
+    min-height: 50vh;
+}
+.left {
+    display: flex;
+    margin: 10px;
+}
+.brleft, .brright, .topright {
+    display: flex;
+    margin: 10px;
+    min-height: 25vh;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}

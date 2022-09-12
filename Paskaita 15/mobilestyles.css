@@ -1,0 +1,48 @@
+.container, .right, .bottomright {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left, .topright, .brleft, .brright {
+    background: aquamarine;
+    flex: 1;
+    margin: 3px;
+    min-height: 30vh;
+}
+@media screen and (min-width: 499px) and (max-width: 768px) {
+    .right, .bottomright {
+        display: flex;
+        flex-direction: row;
+        flex: 1;   
+    }
+    .left, .topright, .brleft, .brright {
+        margin: 5px;
+        min-height: 50vh;
+}
+}
+@media screen and (min-width: 769px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        min-height: 100vh;   
+    }
+    .right {
+        display: flex;
+        flex: 1;
+        min-height: 50vh;
+    }
+    .bottomright {
+        display: flex;
+        flex-direction: row;
+        min-height: 25vh;
+    }
+    .left, .topright, .brleft, .brright {
+        margin: 10px;
+}
+}
