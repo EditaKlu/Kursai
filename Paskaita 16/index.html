@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* transition  */
+            transition: all 100ms;
+            transition-timing-function: ease-in;
+            transition-delay: 500ms;
+            /* animation
+            animation-name: color-change;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;  */
+            /* amžinai kartosis */
+        }
+        .container:hover {
+            width: 300px;
+            background-color: orange;
+            /* jei transition prie hover rašysi, tai veiks tik tol, kol užvesta pelytė, o paskui animacija tiesiog "nukris" nebus gražaus perėjimo */
+        }
+        /* Animacijos kodas */
+        @keyframes color-change {
+            from {background-color: green;}
+            to {background-color: blue;}
+        }
+        /* variantas su relative */
+        .cube {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            position: relative;
+            animation-name: cube-around;
+            animation-duration: 4s;
+            animation-delay: 2s;
+        }
+        @keyframes cube-around {
+            0% {background-color:chartreuse; left: 0px; top: 0px;}
+            25% {background-color: blueviolet; left: 200px; top: 0px;} 
+            50% {background-color: rgb(226, 43, 141); left: 200px; top: 200px;}
+            75% {background-color: rgb(219, 6, 9); left: 0px; top: 200px;}
+            100% {background-color: rgb(21, 162, 250); left: 0px; top: 0px;}
+        }
+        /* variantas su margin */
+        .cube {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            animation-name: cube-around;
+            animation-duration: 4s;
+            animation-delay: 2s;
+        }
+        @keyframes cube-around {
+            0% {background-color:chartreuse; margin: 0;margin-top: 0;}
+            25% {background-color: blueviolet; margin: 30%;margin-top: 0;} 
+            50% {background-color: rgb(226, 43, 141); margin: 30%;margin-top:30%;}
+            75% {background-color: rgb(219, 6, 9); margin: 0;margin-top: 30%;}
+            100% {background-color: rgb(21, 162, 250); margin: 0;margin-top: 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="cube"></div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+body {
+  font: 100% Helvetica, sans-serif;
+}
+
+p {
+  color: rgb(243, 4, 156);
+}
+
+h1 {
+  color: rgb(243, 4, 156);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.info {
+  background: DarkGray;
+  box-shadow: 0 0 1px rgba(169, 169, 169, 0.25);
+  color: #fff;
+  width: 50vh;
+}
+
+.alert {
+  background: DarkRed;
+  box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);
+  color: #fff;
+}
+
+.success {
+  background: DarkGreen;
+  box-shadow: 0 0 1px rgba(0, 100, 0, 0.25);
+  color: #fff;
+}
+
+.dinosour-div, #some-other-div {
+  background-image: url("https://images.unsplash.com/photo-1567428289786-cddc036eadfb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+#some-other-div {
+  height: 200px;
+}
+
+.result {
+  color: blue;
+}
+
+.saturate {
+  width: 500px;
+  height: 60px;
+  background-color: #ff54ac;
+}
+
+.content-div1 {
+  background-color: #0000e6;
+}
+
+.content-div2 {
+  background-color: #0000cc;
+}
+
+.content-div3 {
+  background-color: #0000b3;
+}
+
+.content-div4 {
+  background-color: #000099;
+}
+
+.content-div5 {
+  background-color: navy;
+}/*# sourceMappingURL=style.css.map */
