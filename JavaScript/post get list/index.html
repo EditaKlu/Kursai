@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <container>
+      <main>
+        <header>
+          <h1>PADARYK dabar</h1> 
+        </header>
+          <section class="new_task_container">
+              <p class="firstP" >Pridėti naują užduotį</p>
+              <button type="button" class="btn btn-primary plus" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">+</button>
+          </section>
+          <section class="task_list_container">
+              <h2>Užduotys</h2>
+              <div class="tasks"></div>
+          </section>
+      </main> 
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Nauja užduotis</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="task" class="col-form-label">Užduotis:</label>
+                  <input type="text" class="form-control" id="task">
+                  <div class="error"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="date" class="col-form-label">Data:</label>
+                  <input type="date" class="form-control" id="date">
+                </div>
+                <div class="mb-3">
+                  <label for="description" class="col-form-label">Plačiau:</label>
+                  <textarea class="form-control" id="description"></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Uždaryti</button>
+                  <button type="submit" class="btn btn-primary">Išsaugoti</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="main.js" type="module"></script>
+  </container>  
+</body>
+</html>

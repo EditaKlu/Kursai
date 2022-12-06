@@ -1,47 +1,96 @@
-const myForm = document.querySelector('form');
-myForm.addEventListener('submit', (event) => {
+const form = document.querySelector("form");
+
+const NAME_REQUIRED = "Vardo laukas privalomas";
+const EMAIL_REQUIRED = "El. pašto laukas privalomas";
+const EMAIL_INVALID = "Neteisingai įvestas el. paštas";
+
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+
+//   const nameField = form.elements["name"];
+//   const emailField = form.elements["email"];
+
+//   const nameValid = hasValue(nameField, NAME_REQUIRED);
+//   const emailValid = validateEmail(emailField, EMAIL_REQUIRED, EMAIL_INVALID);
+
+//   if (nameValid && emailValid) {
+//     alert("Duomenys įvesti teisingai");
+//   }
+// });
+
+// 3.variantas anonimine funkcija arrow function, taip aprasoma funkcija turi eiti pries funkcijos iskvietima
+
+const duomenys = (event) => {
     event.preventDefault();
-    // const myName = document.getElementById('name');
-    // const myName = myForm.querySelector('#name');
-    const myName = myForm.elements['name'];
-    const myEmail = myForm.elements['email'];
-    const myNameValid = nameValidation(myName);
-    const myEmailValid = validateEmail(myEmail);
-    if (myNameValid && myEmailValid) {
-        window.location.href = 'https://www.google.com'
-    }
-    console.log(myName);
-})
 
-function nameValidation(inputElement) {
-    if (inputElement.value === '') {
-        inputElement.parentNode.querySelector("small").innerText = "Fail";
-    } else {
-        inputElement.parentNode.querySelector("small").innerText = "OK";
-    }
-    return inputElement.value !== '';
+  const nameField = form.elements["name"];
+  const emailField = form.elements["email"];
+
+  const nameValid = hasValue(nameField, NAME_REQUIRED);
+  const emailValid = validateEmail(emailField, EMAIL_REQUIRED, EMAIL_INVALID);
+
+  if (nameValid && emailValid) {
+    alert("Duomenys įvesti teisingai");
+  }
+}
+// 2 variantas
+form.addEventListener("submit", duomenys);
+
+// function duomenys(event) {
+//     event.preventDefault();
+
+//   const nameField = form.elements["name"];
+//   const emailField = form.elements["email"];
+
+//   const nameValid = hasValue(nameField, NAME_REQUIRED);
+//   const emailValid = validateEmail(emailField, EMAIL_REQUIRED, EMAIL_INVALID);
+
+//   if (nameValid && emailValid) {
+//     alert("Duomenys įvesti teisingai");
+//   }
+// }
+
+
+
+function showMessage(input, message) {
+  const msg = input.parentNode.querySelector("small");
+  msg.innerText = message;
 }
 
-function validateEmail(email) {
-    if (!hasValue(email)){
-        return false;
-    }
-        const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    // is google regex
-    if (!re.test(email.value)) {
-        email.parentNode.querySelector("small").innerText = "Fail";
-    } else {
-        email.parentNode.querySelector("small").innerText = "OK";
-    }
-    return re.test(email.value);
+function showError(input, message) {
+  showMessage(input, message);
+  input.classList.add("error");
+  input.classList.remove("success");
 }
-function hasValue(inputElement) {
-    if (inputElement.value === "") {
-        showMessage(inputElement.parentNode, "required")
-        return false;
-    }
 
+function showSuccess(input) {
+  showMessage(input, "");
+  input.classList.add("success");
+  input.classList.remove("error");
 }
-function showMessage(parentElement, msg) {
-    parentElement.querySelector("small").innerText = msg;
+
+function hasValue(input, message) {
+  if (input.value.trim() === "") {
+    showError(input, message);
+    return false;
+  }
+  showSuccess(input);
+  return true;
+}
+
+function validateEmail(input, requiredMsg, invalidMsg) {
+  if (!hasValue(input, requiredMsg)) {
+    return false;
+  }
+
+  const emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  const email = input.value.trim();
+
+  if (!emailRegex.test(email)) {
+    showError(input, invalidMsg);
+    return false;
+  }
+  return true;
 }
